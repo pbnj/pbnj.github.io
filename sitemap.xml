@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://petermbenjamin.github.io/blog/a-minimal-chromebook-setup-for-development-and-hacking/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://petermbenjamin.github.io/blog/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
   </url>
   
   <url>
@@ -12,12 +18,38 @@
   </url>
   
   <url>
+    <loc>https://petermbenjamin.github.io/tags/chromebook/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://petermbenjamin.github.io/tags/development/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://petermbenjamin.github.io/tags/hacking/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://petermbenjamin.github.io/tags/minimal/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://petermbenjamin.github.io/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://petermbenjamin.github.io/tags/</loc>
+    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
     <priority>0</priority>
   </url>
   
