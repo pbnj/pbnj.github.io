@@ -6,10 +6,20 @@
     <description>Recent content on Peter M. Benjamin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 May 2018 12:20:33 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jul 2018 21:21:23 -0800</lastBuildDate>
     
 	<atom:link href="https://petermbenjamin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Security Best Practices</title>
+      <link>https://petermbenjamin.github.io/blog/docker-security-best-practices/</link>
+      <pubDate>Thu, 19 Jul 2018 21:21:23 -0800</pubDate>
+      
+      <guid>https://petermbenjamin.github.io/blog/docker-security-best-practices/</guid>
+      <description>Table of Contents  Overview The Host Docker Hardening Standard Docker Engine Container Privileges Static Analysis Runtime Security Conclusion  Overview Containers have revolutionized the tech industry in recent years for many reasons. Because of their properties of encapsulating dependencies into a portable container image, many organizations have adopted them as the primary method of developing, building, and deploying production applications.
+As a Software Engineer and a Security Engineer, I cannot even begin to express my excitement for the game-changing potential of containers and orchestrators, namely Kubernetes.</description>
+    </item>
     
     <item>
       <title>A Minimal Chromebook Setup for Development and Hacking</title>

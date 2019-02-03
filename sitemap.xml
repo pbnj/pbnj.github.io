@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://petermbenjamin.github.io/blog/docker-security-best-practices/</loc>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://petermbenjamin.github.io/blog/a-minimal-chromebook-setup-for-development-and-hacking/</loc>
     <lastmod>2018-05-06T12:20:33-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://petermbenjamin.github.io/blog/</loc>
-    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
   </url>
   
   <url>
@@ -24,8 +29,20 @@
   </url>
   
   <url>
+    <loc>https://petermbenjamin.github.io/tags/container/</loc>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://petermbenjamin.github.io/tags/development/</loc>
     <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://petermbenjamin.github.io/tags/docker/</loc>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -43,7 +60,13 @@
   
   <url>
     <loc>https://petermbenjamin.github.io/</loc>
-    <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://petermbenjamin.github.io/tags/security/</loc>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
     <priority>0</priority>
   </url>
   
