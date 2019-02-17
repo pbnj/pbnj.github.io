@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://petermbenjamin.github.io/blog/kubernetes-security-best-practices/</loc>
+    <lastmod>2018-07-19T10:27:21-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://petermbenjamin.github.io/blog/a-minimal-chromebook-setup-for-development-and-hacking/</loc>
     <lastmod>2018-05-06T12:20:33-08:00</lastmod>
   </url>
@@ -49,6 +54,12 @@
   <url>
     <loc>https://petermbenjamin.github.io/tags/hacking/</loc>
     <lastmod>2018-05-06T12:20:33-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://petermbenjamin.github.io/tags/kubernetes/</loc>
+    <lastmod>2018-07-19T21:21:23-08:00</lastmod>
     <priority>0</priority>
   </url>
   
