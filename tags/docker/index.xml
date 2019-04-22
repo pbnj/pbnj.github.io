@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docker on Peter M. Benjamin</title>
+    <title>docker on Peter M. Benjamin</title>
     <link>https://petermbenjamin.github.io/tags/docker/</link>
-    <description>Recent content in Docker on Peter M. Benjamin</description>
+    <description>Recent content in docker on Peter M. Benjamin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jul 2018 21:21:23 -0800</lastBuildDate>
