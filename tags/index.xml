@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Peter M. Benjamin</title>
-    <link>https://petermbenjamin.github.io/tags/</link>
+    <link>https://pbnj.dev/tags/</link>
     <description>Recent content in Tags on Peter M. Benjamin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Aug 2018 10:57:56 -0800</lastBuildDate>
     
-	<atom:link href="https://petermbenjamin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pbnj.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>application security</title>
-      <link>https://petermbenjamin.github.io/tags/application-security/</link>
+      <link>https://pbnj.dev/tags/application-security/</link>
       <pubDate>Sat, 18 Aug 2018 10:57:56 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/application-security/</guid>
+      <guid>https://pbnj.dev/tags/application-security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>security</title>
-      <link>https://petermbenjamin.github.io/tags/security/</link>
+      <link>https://pbnj.dev/tags/security/</link>
       <pubDate>Sat, 18 Aug 2018 10:57:56 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/security/</guid>
+      <guid>https://pbnj.dev/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>stride</title>
-      <link>https://petermbenjamin.github.io/tags/stride/</link>
+      <link>https://pbnj.dev/tags/stride/</link>
       <pubDate>Sat, 18 Aug 2018 10:57:56 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/stride/</guid>
+      <guid>https://pbnj.dev/tags/stride/</guid>
       <description></description>
     </item>
     
     <item>
       <title>threat models</title>
-      <link>https://petermbenjamin.github.io/tags/threat-models/</link>
+      <link>https://pbnj.dev/tags/threat-models/</link>
       <pubDate>Sat, 18 Aug 2018 10:57:56 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/threat-models/</guid>
+      <guid>https://pbnj.dev/tags/threat-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>container</title>
-      <link>https://petermbenjamin.github.io/tags/container/</link>
+      <link>https://pbnj.dev/tags/container/</link>
       <pubDate>Thu, 19 Jul 2018 21:21:23 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/container/</guid>
+      <guid>https://pbnj.dev/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://petermbenjamin.github.io/tags/docker/</link>
+      <link>https://pbnj.dev/tags/docker/</link>
       <pubDate>Thu, 19 Jul 2018 21:21:23 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/docker/</guid>
+      <guid>https://pbnj.dev/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
-      <link>https://petermbenjamin.github.io/tags/kubernetes/</link>
+      <link>https://pbnj.dev/tags/kubernetes/</link>
       <pubDate>Thu, 19 Jul 2018 21:21:23 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/kubernetes/</guid>
+      <guid>https://pbnj.dev/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>chromebook</title>
-      <link>https://petermbenjamin.github.io/tags/chromebook/</link>
+      <link>https://pbnj.dev/tags/chromebook/</link>
       <pubDate>Sun, 06 May 2018 12:20:33 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/chromebook/</guid>
+      <guid>https://pbnj.dev/tags/chromebook/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
-      <link>https://petermbenjamin.github.io/tags/development/</link>
+      <link>https://pbnj.dev/tags/development/</link>
       <pubDate>Sun, 06 May 2018 12:20:33 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/development/</guid>
+      <guid>https://pbnj.dev/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hacking</title>
-      <link>https://petermbenjamin.github.io/tags/hacking/</link>
+      <link>https://pbnj.dev/tags/hacking/</link>
       <pubDate>Sun, 06 May 2018 12:20:33 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/hacking/</guid>
+      <guid>https://pbnj.dev/tags/hacking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>minimal</title>
-      <link>https://petermbenjamin.github.io/tags/minimal/</link>
+      <link>https://pbnj.dev/tags/minimal/</link>
       <pubDate>Sun, 06 May 2018 12:20:33 -0800</pubDate>
       
-      <guid>https://petermbenjamin.github.io/tags/minimal/</guid>
+      <guid>https://pbnj.dev/tags/minimal/</guid>
       <description></description>
     </item>
     
