@@ -6,6 +6,7 @@
     <description>Recent content in development on Peter M. Benjamin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© 2019 — Peter M. Benjamin — All rights reserved.</copyright>
     <lastBuildDate>Sun, 06 May 2018 12:20:33 -0800</lastBuildDate>
     
 	<atom:link href="https://pbnj.dev/tags/development/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +18,7 @@
       <pubDate>Sun, 06 May 2018 12:20:33 -0800</pubDate>
       
       <guid>https://pbnj.dev/blog/a-minimal-chromebook-setup-for-development-and-hacking/</guid>
-      <description>Table of Contents  The TLDR Version Introduction The SOLID Principles  Security Ownership Cost Leverage Native Capabilities Inherent Restrictions Developer Experience  The Details  Hardware Software  Parting Thoughts  The TLDR Version  If you buy a Chromebook, stay within the confines and stick with ChromeOS; it’s not worth hacking to enable dual-booting, side-loading, or wiping of ChromeOS for a Linux distro.  If you insist on a Linux distro, just buy a used Lenovo; it will be more capable, versatile, and compatible with your Linux distro out-of-the-box.</description>
+      <description>Table of Contents  The TLDR Version Introduction The SOLID Principles  Security Ownership Cost Leverage Native Capabilities Inherent Restrictions Developer Experience  The Details  Hardware Software  Parting Thoughts   The TLDR Version  If you buy a Chromebook, stay within the confines and stick with ChromeOS; it’s not worth hacking to enable dual-booting, side-loading, or wiping of ChromeOS for a Linux distro.  If you insist on a Linux distro, just buy a used Lenovo; it will be more capable, versatile, and compatible with your Linux distro out-of-the-box.</description>
     </item>
     
   </channel>

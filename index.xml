@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Peter M. Benjamin</title>
+    <title>About on Peter M. Benjamin</title>
     <link>https://pbnj.dev/</link>
-    <description>Recent content on Peter M. Benjamin</description>
+    <description>Recent content in About on Peter M. Benjamin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© 2019 — Peter M. Benjamin — All rights reserved.</copyright>
     <lastBuildDate>Sat, 18 Aug 2018 10:57:56 -0800</lastBuildDate>
     
 	<atom:link href="https://pbnj.dev/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +18,7 @@
       <pubDate>Sat, 18 Aug 2018 10:57:56 -0800</pubDate>
       
       <guid>https://pbnj.dev/blog/demystifying-stride-threat-models/</guid>
-      <description>Table of Contents  Introduction What is a Threat Model? What is STRIDE?  Spoofing Tampering Repudiation Information Disclosure Denial of Service Elevation of Privileges  Summary Additional Resources  Introduction Software is eating the world. As a result, the repercussions of software failure is costly and, at times, can be catastrophic. This can be seen today in a wide variety of incidents, from data leak incidents caused by misconfigured AWS S3 buckets to Facebook data breach incidents due to lax API limitations to the Equifax incident due to the use of an old Apache Struts version with a known critical vulnerability.</description>
+      <description>Table of Contents  Introduction What is a Threat Model? What is STRIDE?  Spoofing Tampering Repudiation Information Disclosure Denial of Service Elevation of Privileges  Summary Additional Resources Footnotes Updates   Introduction Software is eating the world. As a result, the repercussions of software failure is costly and, at times, can be catastrophic. This can be seen today in a wide variety of incidents, from data leak incidents caused by misconfigured AWS S3 buckets to Facebook data breach incidents due to lax API limitations to the Equifax incident due to the use of an old Apache Struts version with a known critical vulnerability.</description>
     </item>
     
     <item>
@@ -45,7 +46,17 @@ As a Software Engineer and a Security Engineer, I cannot even begin to express m
       <pubDate>Sun, 06 May 2018 12:20:33 -0800</pubDate>
       
       <guid>https://pbnj.dev/blog/a-minimal-chromebook-setup-for-development-and-hacking/</guid>
-      <description>Table of Contents  The TLDR Version Introduction The SOLID Principles  Security Ownership Cost Leverage Native Capabilities Inherent Restrictions Developer Experience  The Details  Hardware Software  Parting Thoughts  The TLDR Version  If you buy a Chromebook, stay within the confines and stick with ChromeOS; it’s not worth hacking to enable dual-booting, side-loading, or wiping of ChromeOS for a Linux distro.  If you insist on a Linux distro, just buy a used Lenovo; it will be more capable, versatile, and compatible with your Linux distro out-of-the-box.</description>
+      <description>Table of Contents  The TLDR Version Introduction The SOLID Principles  Security Ownership Cost Leverage Native Capabilities Inherent Restrictions Developer Experience  The Details  Hardware Software  Parting Thoughts   The TLDR Version  If you buy a Chromebook, stay within the confines and stick with ChromeOS; it’s not worth hacking to enable dual-booting, side-loading, or wiping of ChromeOS for a Linux distro.  If you insist on a Linux distro, just buy a used Lenovo; it will be more capable, versatile, and compatible with your Linux distro out-of-the-box.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://pbnj.dev/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://pbnj.dev/contact/</guid>
+      <description>You may reach me on:
+ Twitter Email LinkedIn Keybase  </description>
     </item>
     
   </channel>

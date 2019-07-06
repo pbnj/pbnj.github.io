@@ -1,175 +1,46 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
-        <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>
-Docker Security Best Practices - Peter M. Benjamin
-</title>
+    <title>Docker Security Best Practices | Peter M. Benjamin</title>
 
+    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1,h2,h3{line-height:1.2}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}</style>
 
-
-        <meta property="og:title" content="Docker Security Best Practices - Peter M. Benjamin" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://pbnj.dev/blog/docker-security-best-practices/"/>
-<meta property="og:site_name" content="Peter M. Benjamin"/>
-
-
-
-
-<meta property="og:image" content="https://pbnj.dev/home/profile.jpg"/>
-
-
-
-
-        
-<link rel="shortcut icon" href="/img/fav.ico">
-
-
-        
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.a23583c1a4f854edcd3f770a704f2656ee96a0250ad5dae6f8b7c4dd3bff285c.css" integrity="sha256-ojWDwaT4VO3NP3cKcE8mVu6WoCUK1drm&#43;LfE3Tv/KFw=" crossorigin="anonymous" media="screen">
-
-
-
-
-    <link rel="stylesheet" href="/css/all.min.css" integrity="" crossorigin="anonymous" media="screen">
-
-        
-        
-        
-        
-    </head>
-    <body>
-        <section id="top" class="section">
-            
-            <div class="container hero ">
-                
-
-    <h1 class="bold-title is-1">Blog</h1>
-
-
-            </div>
-            
-            <div class="section ">
-                
-<div class="container">
-    <hr>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <div class="navbar-menu " id="navMenu">
-            
-            
-            
-            
-            <a class="navbar-item" href="/">main</a>
-            
-
-            
-            
-            
-            <a class="navbar-item" href="/#about">About</a>
-            
-            
-            
-            
-            
-
-            
-            
-            
-            
-
-            
-            
-            
-            
-            <a class="navbar-item" href="https://pbnj.dev/blog/">
-                
-                Back to Blog
-                
-            </a>
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="/#contact">Contact</a>
-            
-            
-
-            
-
-            
-            <a class="navbar-item" href="https://pbnj.dev/index.xml"><i class="fas fa-rss"></i></a>
-            
-            
-        </div>
-    </nav>
-    <hr>
-</div>
-
-
-
-                
-    <div class="container">
-        <h2 class="title is-1 top-pad strong-post-title">
-            <a href="https://pbnj.dev/blog/docker-security-best-practices/">Docker Security Best Practices</a>
-        </h2>
-        <div class="post-data">
-            Jul 19, 2018 |
-            5 minutes read
-        </div>
-        
-        <div class="blog-share">
-            Share this:
-            
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Docker%20Security%20Best%20Practices%20https%3a%2f%2fpbnj.dev%2fblog%2fdocker-security-best-practices%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fab fa-twitter"></i>
-                <span class="hidden">Twitter</span>
-            </a>
-            
-            
-            
-            
-        </div>
-        
-        
-        
-        <p>
-            Tags:
-            
-            <a href="/tags/docker">docker</a>,
-            
-            <a href="/tags/kubernetes">kubernetes</a>,
-            
-            <a href="/tags/container">container</a>,
-            
-            <a href="/tags/security">security</a>
-            
-        </p>
-        
-    </div>
     
-    <div class="container markdown top-pad">
-        
+</head>
+
+<body>
+<div class="header">
+    <h1>
+        <a href="/">Peter M. Benjamin</a>
+        <div class="header-menu">
+            <a href="/blog/">blog</a>
+            <a href="/contact/">contact</a>
+        </div>
+    </h1>
+</div>
+<div id="content">
+
+<header>
+    <h1>Docker Security Best Practices</h1>
+    
+
+<div class="post-meta">
+    Date &#x5b;
+    <time datetime="2018-07-19">Jul 19, 2018</time>
+    &#x5d;
+    Tags &#x5b;
+    <a href="https://pbnj.dev/tags/docker/">docker</a>
+    <a href="https://pbnj.dev/tags/kubernetes/">kubernetes</a>
+    <a href="https://pbnj.dev/tags/container/">container</a>
+    <a href="https://pbnj.dev/tags/security/">security</a>
+    &#x5d;
+</div>
+</header>
+<article>
+    
 
 <p><img src="https://upload.wikimedia.org/wikipedia/en/4/41/Stefan_Beese%27s_Eco_Shipping_Container_Lounge_by_Melissa_Carrier.jpg" alt="container" /></p>
 
@@ -241,8 +112,24 @@ Docker Security Best Practices - Peter M. Benjamin
 <p>✅ The Center for Internet Security (CIS) puts out documents detailing security best-practices, recommendations, and actionable steps to achieve a hardened baseline. The best part: <a href="https://downloads.cisecurity.org/download-issues/benchmarks">they&rsquo;re free</a>.</p>
 
 <p>✅ Better yet, <a href="https://github.com/docker/docker-bench-security">docker-bench-security</a> is an automated checker based on the CIS benchmarks.</p>
-
-<pre><code># recommended
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># recommended
 $ docker run \
     -it \
     --net host \
@@ -254,9 +141,9 @@ $ docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /usr/lib/systemd:/usr/lib/systemd \
     -v /etc:/etc --label docker_bench_security \
-    docker/docker-bench-security
-</code></pre>
-
+    docker/docker-bench-security</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
 <h2 id="docker-engine">Docker Engine</h2>
@@ -268,14 +155,22 @@ $ docker run \
 <p>🗒️ If anyone can reach the networked socket that Docker is listening on, they potentially have access to Docker and, since Docker needs to run as root, to the underlying host</p>
 
 <p>✅ The default docker behavior today is the safest assumption, which is to listen on a <code>unix</code> socket</p>
-
-<pre><code># not recommended
-$ dockerd -H &quot;tcp://1.2.3.4:8080&quot;
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># not recommended
+$ dockerd -H &#34;tcp://1.2.3.4:8080&#34;
 
 # recommended
-$ dockerd -H &quot;unix:///var/run/docker.sock&quot;
-</code></pre>
-
+$ dockerd -H &#34;unix:///var/run/docker.sock&#34;</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
 <p>❌ Mounting the Docker socket into the container</p>
@@ -283,11 +178,16 @@ $ dockerd -H &quot;unix:///var/run/docker.sock&quot;
 <p>🗒️ Mounting <code>/var/run/docker.sock</code> inside the container is a common, yet very dangerous practice. An attacker can execute any command that the docker service can run, which generally provides access to the whole host system as the docker service runs as root.</p>
 
 <p>✅ Short of just saying &ldquo;Don&rsquo;t mount the docker socket&rdquo;, carefully consider the use-cases that require this giant loophole. For example, many tutorials for running a Jenkins master in a container will instruct you to mount the docker socket so that Jenkins can spin up other containers to run your tests in. This is dangerous as that means anyone can execute any shell commands from Jenkins to gain unauthorized access to sensitive information or secrets (e.g. API tokens, environment variables) from other containers, or launch privileged containers and mount <code>/etc/shadow</code> to extract all users&rsquo; passwords.</p>
-
-<pre><code># not recommended
-$ docker run -it -v /var/run/docker.sock:/var/run/docker.sock ubuntu /bin/bash
-</code></pre>
-
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># not recommended
+$ docker run -it -v /var/run/docker.sock:/var/run/docker.sock ubuntu /bin/bash</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
 <h2 id="container-privileges">Container Privileges</h2>
@@ -297,14 +197,22 @@ $ docker run -it -v /var/run/docker.sock:/var/run/docker.sock ubuntu /bin/bash
 <p>🗒️ Containers would have full access to the underlying host</p>
 
 <p>✅ If needed by a container, grant it only the specific capabilities that it needs</p>
-
-<pre><code># not recommended
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># not recommended
 $ docker run -d --privileged ubuntu
 
 # recommended
-$ docker run -d --cap-add SYS_PTRACE ubuntu
-</code></pre>
-
+$ docker run -d --cap-add SYS_PTRACE ubuntu</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
 <p>❌ Running containers as root users</p>
@@ -312,8 +220,24 @@ $ docker run -d --cap-add SYS_PTRACE ubuntu
 <p>🗒️ This is a system administration standard best-practice. There is little to no reason for running software in containers as <code>root</code>.</p>
 
 <p>✅ Run containers as non-root users</p>
-
-<pre><code># not recommended (runtime example)
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># not recommended (runtime example)
 $ docker run -d ubuntu sleep infinity
 $ ps aux | grep sleep
 root ... sleep infinity
@@ -325,9 +249,9 @@ $ ps aux | grep sleep
 
 # recommended (build-time example)
 FROM ubuntu:latest
-USER 1000
-</code></pre>
-
+USER 1000</pre></td></tr></table>
+</div>
+</div>
 <hr />
 
 <h2 id="static-analysis">Static Analysis</h2>
@@ -367,50 +291,26 @@ USER 1000
 
 <p>Container technology is not inherently more or less secure than traditional virtualization technologies. Containers are enabled by Linux features, such as namespace isolation and cgroups to control to control system resources. Securing container workloads and the systems underneath them require an understanding of Linux as a platform.</p>
 
+</article>
+
+
+    </div>
+<div class="footer">
+    
+    
+    <div class="footer-links">
+        <a href="https://github.com/petermbenjamin">GitHub</a>
+        <a href="/posts/index.xml">RSS</a>
+        <a href="mailto:petermbenjamin@gmail.com">Contact</a>
+        
     </div>
     
+
     
-
-
-
-                
-                <div class="container">
-    <hr>
-</div>
-<div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-<div class="container">
-    <hr>
-</div>
-
-                <div class="section" id="footer">
-    <div class="container has-text-centered">
     
-        <span class="footer-text">
-            <a href="https://github.com/victoriadotdev/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
-        </span>
+    <div class="copyright">© 2019 — Peter M. Benjamin — All rights reserved.</div>
     
-    </div>
 </div>
+</body>
 
-                
-            </div>
-        </section>
-        
-        
-
-
-<script src="https://pbnj.dev/js/bundle.baa2874a80b328e7dec720d3a90efc6efd25ccdf1611f37d9571354e88987590.js" integrity="sha256-uqKHSoCzKOfexyDTqQ78bv0lzN8WEfN9lXE1ToiYdZA="></script>
-
-
-
-        
-        
-        
-        
-    </body>
 </html>

@@ -1,177 +1,54 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        
-        <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>
-Demystifying Stride Threat Models - Peter M. Benjamin
-</title>
+    <title>Demystifying Stride Threat Models | Peter M. Benjamin</title>
 
+    <style>body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1,h2,h3{line-height:1.2}div.header h1{padding-top:0;padding-bottom:8px;margin-bottom:24px;font-size:18px;font-weight:400;border-bottom:1px solid}.header-menu{float:right}ul.pagination{list-style-type:none;text-align:center;padding:0}ul.pagination>li{padding:0 8px;display:inline-block}div.footer{border-top:1px solid;text-align:center}img{max-width:100%;max-height:100%;display:block;margin-left:auto;margin-right:auto}</style>
 
-
-        <meta property="og:title" content="Demystifying Stride Threat Models - Peter M. Benjamin" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content=""/>
-<meta property="og:url" content="https://pbnj.dev/blog/demystifying-stride-threat-models/"/>
-<meta property="og:site_name" content="Peter M. Benjamin"/>
-
-
-
-
-<meta property="og:image" content="https://pbnj.dev/home/profile.jpg"/>
-
-
-
-
-        
-<link rel="shortcut icon" href="/img/fav.ico">
-
-
-        
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.a23583c1a4f854edcd3f770a704f2656ee96a0250ad5dae6f8b7c4dd3bff285c.css" integrity="sha256-ojWDwaT4VO3NP3cKcE8mVu6WoCUK1drm&#43;LfE3Tv/KFw=" crossorigin="anonymous" media="screen">
-
-
-
-
-    <link rel="stylesheet" href="/css/all.min.css" integrity="" crossorigin="anonymous" media="screen">
-
-        
-        
-        
-        
-    </head>
-    <body>
-        <section id="top" class="section">
-            
-            <div class="container hero ">
-                
-
-    <h1 class="bold-title is-1">Blog</h1>
-
-
-            </div>
-            
-            <div class="section ">
-                
-<div class="container">
-    <hr>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <div class="navbar-menu " id="navMenu">
-            
-            
-            
-            
-            <a class="navbar-item" href="/">main</a>
-            
-
-            
-            
-            
-            <a class="navbar-item" href="/#about">About</a>
-            
-            
-            
-            
-            
-
-            
-            
-            
-            
-
-            
-            
-            
-            
-            <a class="navbar-item" href="https://pbnj.dev/blog/">
-                
-                Back to Blog
-                
-            </a>
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="/#contact">Contact</a>
-            
-            
-
-            
-
-            
-            <a class="navbar-item" href="https://pbnj.dev/index.xml"><i class="fas fa-rss"></i></a>
-            
-            
-        </div>
-    </nav>
-    <hr>
-</div>
-
-
-
-                
-    <div class="container">
-        <h2 class="title is-1 top-pad strong-post-title">
-            <a href="https://pbnj.dev/blog/demystifying-stride-threat-models/">Demystifying Stride Threat Models</a>
-        </h2>
-        <div class="post-data">
-            Aug 18, 2018 |
-            5 minutes read
-        </div>
-        
-        <div class="blog-share">
-            Share this:
-            
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Demystifying%20Stride%20Threat%20Models%20https%3a%2f%2fpbnj.dev%2fblog%2fdemystifying-stride-threat-models%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fab fa-twitter"></i>
-                <span class="hidden">Twitter</span>
-            </a>
-            
-            
-            
-            
-        </div>
-        
-        
-        
-        <p>
-            Tags:
-            
-            <a href="/tags/security">security</a>,
-            
-            <a href="/tags/threat-models">threat models</a>,
-            
-            <a href="/tags/stride">stride</a>,
-            
-            <a href="/tags/application-security">application security</a>
-            
-        </p>
-        
-    </div>
     
-    <div class="container markdown top-pad">
-        
+</head>
+
+<body>
+<div class="header">
+    <h1>
+        <a href="/">Peter M. Benjamin</a>
+        <div class="header-menu">
+            <a href="/blog/">blog</a>
+            <a href="/contact/">contact</a>
+        </div>
+    </h1>
+</div>
+<div id="content">
+
+<header>
+    <h1>Demystifying Stride Threat Models</h1>
+    
+
+<div class="post-meta">
+    Date &#x5b;
+    <time datetime="2018-08-18">Aug 18, 2018</time>
+    &#x5d;
+    Categories &#x5b;
+    <a href="https://pbnj.dev/categories/security/">security</a>
+    <a href="https://pbnj.dev/categories/application-security/">application security</a>
+    &#x5d;
+    Tags &#x5b;
+    <a href="https://pbnj.dev/tags/security/">security</a>
+    <a href="https://pbnj.dev/tags/threat-models/">threat models</a>
+    <a href="https://pbnj.dev/tags/stride/">stride</a>
+    <a href="https://pbnj.dev/tags/application-security/">application security</a>
+    &#x5d;
+</div>
+</header>
+<article>
+    
 
 <h2 id="table-of-contents">Table of Contents</h2>
+
+<!-- toc -->
 
 <ul>
 <li><a href="#introduction">Introduction</a></li>
@@ -188,6 +65,9 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 </ul></li>
 <li><a href="#summary">Summary</a></li>
 <li><a href="#additional-resources">Additional Resources</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+<li><a href="#updates">Updates</a>
+<!-- /toc --></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -220,8 +100,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 
 <p>Let&rsquo;s dive into each of these categories.</p>
 
-<hr />
-
 <h3 id="spoofing">Spoofing</h3>
 
 <p>Spoofing refers to the act of posing as someone else (i.e. spoofing a user) or claiming a false identity (i.e. spoofing a process).</p>
@@ -236,8 +114,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 </ul>
 
 <p>You would typically mitigate these risks with proper <a href="https://www.owasp.org/index.php/Authentication_Cheat_Sheet">authentication</a>.</p>
-
-<hr />
 
 <h3 id="tampering">Tampering</h3>
 
@@ -262,8 +138,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 <li>Integrate with composition analysis tools (e.g. <code>snyk</code>, <code>npm audit</code>, BlackDuck &hellip;etc) to identify 3rd party libraries/dependencies with known security vulnerabilities.</li>
 </ul>
 
-<hr />
-
 <h3 id="repudiation">Repudiation</h3>
 
 <p>Repudiation refers to the ability of denying that an action or an event has occurred.</p>
@@ -279,8 +153,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 </ul>
 
 <p>You would typically mitigate these risks with proper <a href="https://www.computerweekly.com/tip/Best-practices-for-audit-log-review-for-IT-security-investigations">audit logging</a>.</p>
-
-<hr />
 
 <h3 id="information-disclosure">Information Disclosure</h3>
 
@@ -304,8 +176,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 <li>Avoiding self-signed certificates. Use a valid, trusted Certificate Authority (CA).</li>
 </ul>
 
-<hr />
-
 <h3 id="denial-of-service">Denial of Service</h3>
 
 <p>Denial of Service refers to causing a service or a network resource to be unavailable to its intended users.</p>
@@ -325,8 +195,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 <p>For the Kubernetes example, you would mitigate resource consumption with <a href="https://kubernetes.io/docs/concepts/policy/resource-quotas/">resource quotas</a>.</p>
 
 <p>For a storage example, you would mitigate this with proper log rotation and monitoring/alerting when disk is nearing capacity.</p>
-
-<hr />
 
 <h3 id="elevation-of-privileges">Elevation of Privileges</h3>
 
@@ -350,8 +218,6 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 <li>Generally practicing least privilege principle, like running your web server as a non-root user.</li>
 </ul>
 
-<hr />
-
 <h2 id="summary">Summary</h2>
 
 <p>So, STRIDE is a threat model methodology that should help you systematically examine and address gaps in the security posture of your applications.</p>
@@ -368,15 +234,11 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 <li><a href="https://www.oreilly.com/library/view/threat-modeling-designing/9781118810057/9781118810057c03.xhtml">https://www.oreilly.com/library/view/threat-modeling-designing/9781118810057/9781118810057c03.xhtml</a></li>
 </ul>
 
-<hr />
-
 <h2 id="footnotes">Footnotes</h2>
 
 <ul>
 <li><a name="tanya-janca">1</a>: <a href="https://www.youtube.com/watch?v=YGJqpQy79no&amp;WT.mc_id=shehackspurple-blog-tajanca">https://www.youtube.com/watch?v=YGJqpQy79no&amp;WT.mc_id=shehackspurple-blog-tajanca</a></li>
 </ul>
-
-<hr />
 
 <h2 id="updates">Updates</h2>
 
@@ -385,50 +247,26 @@ Demystifying Stride Threat Models - Peter M. Benjamin
 <li>Add more mitigations against information disclosure.</li>
 </ol>
 
+</article>
+
+
+    </div>
+<div class="footer">
+    
+    
+    <div class="footer-links">
+        <a href="https://github.com/petermbenjamin">GitHub</a>
+        <a href="/posts/index.xml">RSS</a>
+        <a href="mailto:petermbenjamin@gmail.com">Contact</a>
+        
     </div>
     
+
     
-
-
-
-                
-                <div class="container">
-    <hr>
-</div>
-<div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-<div class="container">
-    <hr>
-</div>
-
-                <div class="section" id="footer">
-    <div class="container has-text-centered">
     
-        <span class="footer-text">
-            <a href="https://github.com/victoriadotdev/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
-        </span>
+    <div class="copyright">© 2019 — Peter M. Benjamin — All rights reserved.</div>
     
-    </div>
 </div>
+</body>
 
-                
-            </div>
-        </section>
-        
-        
-
-
-<script src="https://pbnj.dev/js/bundle.baa2874a80b328e7dec720d3a90efc6efd25ccdf1611f37d9571354e88987590.js" integrity="sha256-uqKHSoCzKOfexyDTqQ78bv0lzN8WEfN9lXE1ToiYdZA="></script>
-
-
-
-        
-        
-        
-        
-    </body>
 </html>
