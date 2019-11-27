@@ -6,6 +6,12 @@ Peter Benjamin is a Software Engineer & a Developer Advocate with a background i
 
 Peter has a technical background in the Application Security, Go programming language, Kubernetes, and Docker. Peter is a Kubernetes & Cloud Native Computing Foundation (CNCF) contributor. He is also a co-organizer for the [San Diego Kubernetes](https://www.meetup.com/San-Diego-Kubernetes-Meetup/) and the [San Diego Golang](https://www.meetup.com/sdgophers/) meet-ups. Peter lives in San Diego, California, and spends his free time with his wife & 2 kids.
 
+## Blog
+
+[demystifying-stride-threat-models.md][blog/demystifying-stride-threat-models.md]
+[docker-security-best-practices.md][blog/docker-security-best-practices.md]
+[kubernetes-security-best-practices.md][blog/kubernetes-security-best-practices.md]
+
 ## Contact
 
 You may reach him on:
