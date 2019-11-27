@@ -11,6 +11,5 @@ Peter has a technical background in the Application Security, Go programming lan
 You may reach him on:
 
 - [Twitter](https://twitter.com/petermbenjamin)
-- [Email](mailto:petermbenjamin@gmail.com)
 - [LinkedIn](https://linkedin.com/in/pmbenjamin)
 - [Keybase](https://keybase.io/pbenj)
