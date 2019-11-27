@@ -8,9 +8,9 @@ Peter has a technical background in the Application Security, Go programming lan
 
 ## Blog
 
-[demystifying-stride-threat-models.md][blog/demystifying-stride-threat-models.md]
-[docker-security-best-practices.md][blog/docker-security-best-practices.md]
-[kubernetes-security-best-practices.md][blog/kubernetes-security-best-practices.md]
+- [demystifying-stride-threat-models.md][blog/demystifying-stride-threat-models.md]
+- [docker-security-best-practices.md][blog/docker-security-best-practices.md]
+- [kubernetes-security-best-practices.md][blog/kubernetes-security-best-practices.md]
 
 ## Contact
 
