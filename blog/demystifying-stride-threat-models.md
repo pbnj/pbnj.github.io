@@ -5,6 +5,8 @@ tags: ["security", "threat models", "stride", "application security"]
 categories: ["security", "application security"]
 ---
 
+![stride](../img/stride.jpg)
+
 ## Table of Contents
 
 <!-- toc -->
