@@ -12,6 +12,12 @@ Peter has a technical background in the Application Security, Go programming lan
 - [Docker Security Best Practices](blog/docker-security-best-practices.md)
 - [Kubernetes Security Best Practices](blog/kubernetes-security-best-practices.md)
 
+## Talks
+
+- Attacking and Defending Kubernetes Clusters: A Guided Tour
+  - [Video](https://www.youtube.com/watch?v=UdMFTdeAL1s)
+  - [Slides](https://kccncna19.sched.com/event/Uaew)
+
 ## Contact
 
 You may reach him on:
