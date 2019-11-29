@@ -1,7 +1,3 @@
-[Blog](./blog)
-
----
-
 <img src="profile.jpg" alt="Profile photo" width="300" align="left" />
 
 ## About Me
