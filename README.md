@@ -17,6 +17,7 @@ Peter has a technical background in the Application Security, Go programming lan
 - Attacking and Defending Kubernetes Clusters: A Guided Tour
   - [Video](https://www.youtube.com/watch?v=UdMFTdeAL1s)
   - [Slides](https://kccncna19.sched.com/event/Uaew)
+  - [Repo](https://github.com/securekubernetes/securekubernetes)
 
 ## Contact
 
