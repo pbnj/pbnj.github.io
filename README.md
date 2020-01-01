@@ -2,12 +2,21 @@
 
 ## About Me
 
-Peter Benjamin is a Software Engineer & a Developer Advocate with a background in Information Security and a passion for enabling and empowering Engineers to build secure and scalable applications, services, and platforms on modern and distributed infrastructure.
+Peter Benjamin is a Software Engineer & a Developer Advocate with a background
+in Information Security and a passion for enabling and empowering Engineers to
+build secure and scalable applications, services, and platforms on modern and
+distributed infrastructure.
 
-Peter has a technical background in the Application Security, Go programming language, Kubernetes, and Docker. Peter is a Kubernetes & Cloud Native Computing Foundation (CNCF) contributor. He is also a co-organizer for the [San Diego Kubernetes](https://www.meetup.com/San-Diego-Kubernetes-Meetup/) and the [San Diego Golang](https://www.meetup.com/sdgophers/) meet-ups. Peter lives in San Diego, California, and spends his free time with his wife & 2 kids.
+Peter has a technical background in the Application Security, Go programming
+language, Kubernetes, and Docker. Peter is a Kubernetes & Cloud Native Computing
+Foundation (CNCF) contributor. He is also a co-organizer for the
+[San Diego Kubernetes](https://www.meetup.com/San-Diego-Kubernetes-Meetup/) and
+the [San Diego Golang](https://www.meetup.com/sdgophers/) meet-ups. Peter lives
+in San Diego, California, and spends his free time with his wife & 2 kids.
 
 ## Blog
 
+- [Effective Security Programs](blog/effective-security-programs.md)
 - [Demystifying STRIDE Threat Models](blog/demystifying-stride-threat-models.md)
 - [Docker Security Best Practices](blog/docker-security-best-practices.md)
 - [Kubernetes Security Best Practices](blog/kubernetes-security-best-practices.md)
