@@ -1,6 +1,6 @@
 # Auto-Toggle Between Dark & Light Modes in Alacritty & Vim
 
-![black and white](../img/black-and-white.jpg)
+![black and white](https://images.unsplash.com/photo-1422207049116-cfaf69531072?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
