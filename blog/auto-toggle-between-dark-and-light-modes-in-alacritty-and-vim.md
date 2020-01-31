@@ -132,7 +132,7 @@ And now for the demo:
 
 <!-- ![gif demo](../img/auto-toggle-theme.gif) -->
 
-<video> <source src="img/auto-toggle-themes.webm" type="video/webm"> </video>
+<video> <source src="/img/auto-toggle-theme.webm" type="video/webm"> </video>
 
 ## Conclusion
 
