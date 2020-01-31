@@ -1,5 +1,7 @@
 # Auto-Toggle Between Dark & Light Modes in Alacritty & Vim
 
+![black and white](../img/black-and-white.jpg)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -126,7 +128,9 @@ call SetBackgroundMode()
 
 And now for the demo:
 
-![gif demo](../img/auto-toggle-theme.gif)
+<!-- ![gif demo](../img/auto-toggle-theme.gif) -->
+
+<video> <source src="/img/auto-toggle-themes.webm" type="video/webm"> </video>
 
 ## Conclusion
 
