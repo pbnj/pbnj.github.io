@@ -1,4 +1,4 @@
-<img src="profile.jpg" alt="Profile photo" width="300" align="left" />
+<img src="profile.jpg" alt="Profile photo" width="300" align="center" />
 
 ## About Me
 
