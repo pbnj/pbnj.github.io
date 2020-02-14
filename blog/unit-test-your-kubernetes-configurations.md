@@ -8,19 +8,18 @@ draft: true
 
 ## Table of Content
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [Unit Testing Kubernetes Manifests](#unit-testing-kubernetes-manifests)
+  - [Table of Content](#table-of-content)
+  - [Overview](#overview)
+  - [Introduction to conftest](#introduction-to-conftest)
+  - [Using conftest](#using-conftest)
+    - [Prerequisites](#prerequisites)
+    - [Terraform](#terraform)
+    - [Dockerfile](#dockerfile)
+    - [Kubernetes Manifests](#kubernetes-manifests)
+  - [Conclusion](#conclusion)
 
-- [Introduction](#introduction)
-- [What is conftest?](#what-is-conftest)
-- [Demo](#demo)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Test](#test)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Introduction
+## Overview
 
 Among all the benefits that Kubernetes has brought us, the biggest has been the
 declarative paradigm shift to building platforms. Everything is
@@ -41,7 +40,7 @@ this area. In this article, I will explore one tool in particular:
 [`conftest`](https://github.com/instrumenta/conftest). So, without further
 ado...
 
-## What is conftest?
+## Introduction to conftest
 
 conftest is developed and maintained by the fine folks of
 [Instrumenta](https://instrumenta.dev). Its stated purpose is to be a utility
@@ -51,7 +50,7 @@ language, called
 
 Enough talk. Let's actually see what that looks like in practice!
 
-## Demo
+## Using conftest
 
 ### Prerequisites
 
@@ -62,6 +61,10 @@ Enough talk. Let's actually see what that looks like in practice!
   download for the right platform from
   [GitHub Releases](https://github.com/open-policy-agent/opa/releases)
 
-### Setup
+### Terraform
 
-### Test
+### Dockerfile
+
+### Kubernetes Manifests
+
+## Conclusion

@@ -9,19 +9,16 @@ tags: ["docker", "kubernetes", "container", "security"]
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Overview](#overview)
-- [The Host](#the-host)
-- [Docker Hardening Standard](#docker-hardening-standard)
-- [Docker Engine](#docker-engine)
-- [Container Privileges](#container-privileges)
-- [Static Analysis](#static-analysis)
-- [Runtime Security](#runtime-security)
-- [Conclusion](#conclusion)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [Docker Security Best Practices](#docker-security-best-practices)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [The Host](#the-host)
+  - [Docker Hardening Standard](#docker-hardening-standard)
+  - [Docker Engine](#docker-engine)
+  - [Container Privileges](#container-privileges)
+  - [Static Analysis](#static-analysis)
+  - [Runtime Security](#runtime-security)
+  - [Conclusion](#conclusion)
 
 ## Overview
 

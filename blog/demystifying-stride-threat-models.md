@@ -9,24 +9,21 @@ tags: ["security", "threat models", "stride", "application security"]
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Introduction](#introduction)
-- [What is a Threat Model?](#what-is-a-threat-model)
-- [What is STRIDE?](#what-is-stride)
-  - [Spoofing](#spoofing)
-  - [Tampering](#tampering)
-  - [Repudiation](#repudiation)
-  - [Information Disclosure](#information-disclosure)
-  - [Denial of Service](#denial-of-service)
-  - [Elevation of Privileges](#elevation-of-privileges)
-- [Summary](#summary)
-- [Additional Resources](#additional-resources)
-- [Footnotes](#footnotes)
-- [Updates](#updates)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [Demystifying Stride Threat Models](#demystifying-stride-threat-models)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [What is a Threat Model?](#what-is-a-threat-model)
+  - [What is STRIDE?](#what-is-stride)
+    - [Spoofing](#spoofing)
+    - [Tampering](#tampering)
+    - [Repudiation](#repudiation)
+    - [Information Disclosure](#information-disclosure)
+    - [Denial of Service](#denial-of-service)
+    - [Elevation of Privileges](#elevation-of-privileges)
+  - [Summary](#summary)
+  - [Additional Resources](#additional-resources)
+  - [Footnotes](#footnotes)
+  - [Updates](#updates)
 
 ## Introduction
 

@@ -8,14 +8,11 @@ draft: true
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Overview](#overview)
-- [A Kind Introduction](#a-kind-introduction)
-- [Use Cases](#use-cases)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [Kubernetes in Docker](#kubernetes-in-docker)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [A Kind Introduction](#a-kind-introduction)
+  - [Use Cases](#use-cases)
 
 ## Overview
 

@@ -8,23 +8,20 @@ categories: ["development"]
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [The TLDR Version](#the-tldr-version)
-- [Introduction](#introduction)
-- [The SOLID Principles](#the-solid-principles)
-  - [Security](#security)
-  - [Ownership Cost](#ownership-cost)
-  - [Leverage Native Capabilities](#leverage-native-capabilities)
-  - [Inherent Restrictions](#inherent-restrictions)
-  - [Developer Experience](#developer-experience)
-- [The Details](#the-details)
-  - [Hardware](#hardware)
-  - [Software](#software)
-- [Parting Thoughts](#parting-thoughts)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [A Minimal Chromebook Setup for Development and Hacking](#a-minimal-chromebook-setup-for-development-and-hacking)
+  - [Table of Contents](#table-of-contents)
+  - [The TLDR Version](#the-tldr-version)
+  - [Introduction](#introduction)
+  - [The SOLID Principles](#the-solid-principles)
+    - [Security](#security)
+    - [Ownership Cost](#ownership-cost)
+    - [Leverage Native Capabilities](#leverage-native-capabilities)
+    - [Inherent Restrictions](#inherent-restrictions)
+    - [Developer Experience](#developer-experience)
+  - [The Details](#the-details)
+    - [Hardware](#hardware)
+    - [Software](#software)
+  - [Parting Thoughts](#parting-thoughts)
 
 ## The TLDR Version
 

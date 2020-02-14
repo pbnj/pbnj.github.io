@@ -9,23 +9,20 @@ tags: ["docker", "kubernetes", "container", "security"]
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Overview](#overview)
-- [Secure Baseline](#secure-baseline)
-- [Authentication](#authentication)
-- [Authorization](#authorization)
-- [Admission Controls](#admission-controls)
-- [Impersonation](#impersonation)
-- [Pod Security Policies](#pod-security-policies)
-  - [Full Pod Security Policy Example](#full-pod-security-policy-example)
-- [Network Policies](#network-policies)
-- [Additional Security Measures](#additional-security-measures)
-- [Additional References](#additional-references)
-- [Conclusion](#conclusion)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [Kubernetes Security Best Practices](#kubernetes-security-best-practices)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Secure Baseline](#secure-baseline)
+  - [Authentication](#authentication)
+  - [Authorization](#authorization)
+  - [Admission Controls](#admission-controls)
+  - [Impersonation](#impersonation)
+  - [Pod Security Policies](#pod-security-policies)
+    - [Full Pod Security Policy Example](#full-pod-security-policy-example)
+  - [Network Policies](#network-policies)
+  - [Additional Security Measures](#additional-security-measures)
+  - [Additional References](#additional-references)
+  - [Conclusion](#conclusion)
 
 ## Overview
 

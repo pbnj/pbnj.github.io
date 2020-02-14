@@ -8,7 +8,26 @@ draft: true
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+- [Secrets Management in Software Development Life Cycles](#secrets-management-in-software-development-life-cycles)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Introduction to Vault](#introduction-to-vault)
+  - [Using Vault](#using-vault)
+    - [VM](#vm)
+    - [Docker](#docker)
+    - [Kubernetes](#kubernetes)
+  - [Conclusion](#conclusion)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+## Overview
+
+## Introduction to Vault
+
+## Using Vault
+
+### VM
+
+### Docker
+
+### Kubernetes
+
+## Conclusion

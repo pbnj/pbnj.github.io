@@ -8,20 +8,17 @@ draft: true
 
 ## Table of Contents
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [Introduction](#introduction)
-- [Packages](#packages)
-- [Imports](#imports)
-- [Exports](#exports)
-- [Functions](#functions)
-- [Variables](#variables)
-- [Structs](#structs)
-- [Enums](#enums)
-- [Error Handling](#error-handling)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- [Rust for Gophers](#rust-for-gophers)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Packages](#packages)
+  - [Imports](#imports)
+  - [Exports](#exports)
+  - [Functions](#functions)
+  - [Variables](#variables)
+  - [Structs](#structs)
+  - [Enums](#enums)
+  - [Error Handling](#error-handling)
 
 ## Introduction
 
