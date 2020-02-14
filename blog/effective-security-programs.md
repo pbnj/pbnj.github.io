@@ -1,19 +1,27 @@
+---
+date: 2018-12-31
+tags: ["security", "devops"]
+---
+
 # Effective Security Programs
 
 ## Table of Contents
 
-- [Effective Security Programs](#effective-security-programs)
-  - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Culture](#culture)
-    - [Listen to Your Users](#listen-to-your-users)
-    - [Hold Office Hours, Community Meetings, Events](#hold-office-hours-community-meetings-events)
-    - [Create a Security Champion Program](#create-a-security-champion-program)
-  - [Engineering](#engineering)
-    - [Invest in Tooling, APIs, Services](#invest-in-tooling-apis-services)
-    - [Contribute to Engineering](#contribute-to-engineering)
-    - [Practice What You Preach](#practice-what-you-preach)
-  - [TLDR](#tldr)
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Overview](#overview)
+- [Culture](#culture)
+  - [Listen to Your Users](#listen-to-your-users)
+  - [Hold Office Hours, Community Meetings, Events](#hold-office-hours-community-meetings-events)
+  - [Create a Security Champion Program](#create-a-security-champion-program)
+- [Engineering](#engineering)
+  - [Invest in Tooling, APIs, Services](#invest-in-tooling-apis-services)
+  - [Contribute to Engineering](#contribute-to-engineering)
+  - [Practice What You Preach](#practice-what-you-preach)
+- [TLDR](#tldr)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Overview
 

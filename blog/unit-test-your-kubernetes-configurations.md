@@ -1,30 +1,33 @@
 ---
-author: "Peter Benjamin"
-title: "Unit Testing Kubernetes Manifests"
-date: 2019-05-21T08:29:03-07:00
+date: 2019-05-21
 tags: ["kubernetes", "security", "configuration", "unit testing"]
-categories: ["kubernetes", "security", "development"]
 draft: true
 ---
 
+# Unit Testing Kubernetes Manifests
+
 ## Table of Content
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 - [Introduction](#introduction)
 - [What is conftest?](#what-is-conftest)
 - [Demo](#demo)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Test](#test)
-<!-- /toc -->
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
 
 Among all the benefits that Kubernetes has brought us, the biggest has been the
 declarative paradigm shift to building platforms. Everything is
-configuration-driven and there is no sign of stopping either, given the [Cluster
-API](https://github.com/kubernetes-sigs/cluster-api) project will be bringing
-declarative, Kubernetes-style life-cycle management to your clusters themselves.
+configuration-driven and there is no sign of stopping either, given the
+[Cluster API](https://github.com/kubernetes-sigs/cluster-api) project will be
+bringing declarative, Kubernetes-style life-cycle management to your clusters
+themselves.
 
 With the proliferation of infrastructure-as-code and configuration files, it is
 increasingly critical for infrastructure teams and back-end engineers to ensure
@@ -53,10 +56,11 @@ Enough talk. Let's actually see what that looks like in practice!
 ### Prerequisites
 
 - `conftest` CLI: `brew tap instrumenta/instrumenta && brew install conftest` or
-  download for the right platform from [GitHub
-  Releases](https://github.com/instrumenta/conftest/releases)
-- `opa` CLI (if you want nice features like `opa fmt`): `brew install opa` or download for the right platform
-  from [GitHub Releases](https://github.com/open-policy-agent/opa/releases)
+  download for the right platform from
+  [GitHub Releases](https://github.com/instrumenta/conftest/releases)
+- `opa` CLI (if you want nice features like `opa fmt`): `brew install opa` or
+  download for the right platform from
+  [GitHub Releases](https://github.com/open-policy-agent/opa/releases)
 
 ### Setup
 

@@ -1,14 +1,14 @@
 ---
-author: "Peter Benjamin"
-title: "Secrets Management in Software Development Life Cycles"
-date: 2019-07-07T09:07:00-00:00
+date: 2019-07-07
 tags: ["vault", "secrets", "development"]
-categories: ["application security", "security", "development"]
 draft: true
 ---
 
+# Secrets Management in Software Development Life Cycles
+
 ## Table of Contents
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-<!-- /toc -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
