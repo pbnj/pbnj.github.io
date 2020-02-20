@@ -5,6 +5,10 @@ tags: ["kubernetes", "docker", "configuration", "unit testing", "conftest"]
 
 # Unit Testing Configuration Files
 
+![pile of paper garbage](https://images.unsplash.com/photo-1516992654410-9309d4587e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80)
+_Infrastructure as Code. Photo courtesy:
+[@Bass Emmen](https://unsplash.com/@mediavormgever)_
+
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
