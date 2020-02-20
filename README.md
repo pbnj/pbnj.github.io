@@ -16,6 +16,7 @@ in San Diego, California, and spends his free time with his wife & 2 kids.
 
 ## Blog
 
+- [Unit Test Your Configuration Files](blog/unit-test-your-configuration-files.md)
 - [Effective Security Programs](blog/effective-security-programs.md)
 - [Demystifying STRIDE Threat Models](blog/demystifying-stride-threat-models.md)
 - [Docker Security Best Practices](blog/docker-security-best-practices.md)
