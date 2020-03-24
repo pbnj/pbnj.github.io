@@ -35,4 +35,4 @@ You may reach him via:
 
 - [Twitter](https://twitter.com/petermbenjamin)
 - [LinkedIn](https://linkedin.com/in/pbnj)
-- [Email](mailto:petermbenjamin@protonmail.com)
+- [Email](mailto:petermbenjamin@gmail.com)
