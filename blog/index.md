@@ -1,4 +1,4 @@
-# Blog
+# Posts
 
 - [Unit Test Your Configuration Files](blog/unit-test-your-configuration-files.md)
 - [Effective Security Programs](blog/effective-security-programs.md)
