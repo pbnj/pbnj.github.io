@@ -1,0 +1,46 @@
+[tools]
+prek = "0.5.9"
+
+[env]
+PREVIEW_PORT = "8000"
+
+[tasks."preview:start"]
+description = "Serve the site on localhost in the background (port: PREVIEW_PORT, default 8000)"
+run = '''
+if [ -f .preview.pid ] && kill -0 "$(cat .preview.pid)" 2>/dev/null; then
+  echo "preview already running (pid $(cat .preview.pid)) at http://localhost:$PREVIEW_PORT"
+  exit 0
+fi
+nohup python3 -m http.server "$PREVIEW_PORT" --bind 127.0.0.1 >.preview.log 2>&1 &
+echo $! >.preview.pid
+sleep 0.5
+if ! kill -0 "$(cat .preview.pid)" 2>/dev/null; then
+  rm -f .preview.pid
+  cat .preview.log >&2
+  exit 1
+fi
+echo "preview running (pid $(cat .preview.pid)) at http://localhost:$PREVIEW_PORT"
+'''
+
+[tasks."preview:stop"]
+description = "Stop the background preview server"
+run = '''
+if [ -f .preview.pid ] && kill "$(cat .preview.pid)" 2>/dev/null; then
+  echo "preview stopped (pid $(cat .preview.pid))"
+else
+  echo "preview not running"
+fi
+rm -f .preview.pid
+'''
+
+[tasks."posts:build"]
+description = "Render posts/*.md to blog/ and refresh the post lists and feed"
+run = "scripts/build-posts"
+
+[tasks."prek:install"]
+description = "Install the prek git hooks (pre-commit and commit-msg)"
+run = "prek install --hook-type pre-commit --hook-type commit-msg"
+
+[tasks."prek:run"]
+description = "Run the prek hooks on every file"
+run = "prek run --all-files"

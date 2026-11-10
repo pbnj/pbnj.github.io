@@ -36,10 +36,16 @@ rendered to HTML with pandoc before committing.
    `feed.xml`. Posts with `draft: true` are skipped.
 3. Commit the Markdown and the generated files.
 
-## Preview locally
+## Tasks
 
-```sh
-python3 -m http.server 8000
-```
+Run with [mise](https://mise.jdx.dev) (`mise tasks` lists them):
 
-Then open <http://localhost:8000>.
+| Task            | What                                                        |
+| --------------- | ----------------------------------------------------------- |
+| `preview:start` | Serve the site at <http://localhost:8000> in the background |
+| `preview:stop`  | Stop the preview server                                     |
+| `posts:build`   | Run `scripts/build-posts`                                   |
+| `prek:install`  | Install the git hooks (banned-words checks)                 |
+| `prek:run`      | Run the hooks on every file                                 |
+
+Set `PREVIEW_PORT` to serve on another port.
