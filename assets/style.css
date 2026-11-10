@@ -228,3 +228,15 @@ footer {
 .md .meta::after { content: " -->"; }
 
 .resume-entry .meta + ul { margin-bottom: 0.6rem; }
+
+/* Imported posts: images, figures, tables, table of contents. */
+img { max-width: 100%; height: auto; }
+figure { margin: 1.25rem 0; }
+figcaption { font-size: 0.8rem; color: var(--muted); }
+.md table { border-collapse: collapse; width: 100%; font-size: 0.85rem; margin: 1rem 0; display: block; overflow-x: auto; }
+.md th, .md td { border: 1px solid var(--border); padding: 0.35rem 0.6rem; text-align: left; vertical-align: top; }
+.md .toc { border: 1px dashed var(--border); border-radius: 6px; padding: 0.5rem 1rem; margin: 1rem 0 2rem; }
+.md .toc::before { content: "<!-- contents -->"; color: var(--muted); }
+.md .toc ul { margin: 0.25rem 0; }
+.md .toc a::before, .md .toc a::after,
+.md sup a::before, .md sup a::after { content: none; }

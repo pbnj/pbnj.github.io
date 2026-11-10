@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>POST TITLE · Peter Benjamin</title>
-  <meta name="description" content="ONE-LINE SUMMARY">
+  <title>$title$ · Peter Benjamin</title>
+  <meta name="description" content="$if(description)$$description$$else$$title$$endif$">
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="alternate" type="application/rss+xml" title="Peter Benjamin" href="/feed.xml">
 </head>
@@ -20,11 +20,16 @@
     </header>
 
     <main>
+      <!-- Generated from posts/$slug$.md by scripts/build-posts. Edit the Markdown, not this file. -->
       <article class="md">
-        <h1>POST TITLE</h1>
-        <p class="meta"><time datetime="YYYY-MM-DD">YYYY-MM-DD</time></p>
-
-        <p>Body goes here.</p>
+        <h1>$title$</h1>
+        <p class="meta"><time datetime="$date$">$date$</time></p>
+$if(toc)$
+        <nav class="toc">
+$table-of-contents$
+        </nav>
+$endif$
+$body$
       </article>
 
       <hr>

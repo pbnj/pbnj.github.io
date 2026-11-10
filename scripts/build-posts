@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+"""Render posts/*.md to blog/<slug>.html and refresh the post lists and feed.
+
+Each post is GitHub-flavored Markdown with YAML front matter:
+
+    ---
+    title: "Post title"
+    date: 2026-01-31
+    description: "Optional one-line summary"   # defaults to the title
+    draft: true                                # optional; skipped
+    ---
+
+Rewrites the lists between the "posts:start" and "posts:end" markers in
+blog/index.html and index.html (newest HOME_POSTS only), and feed.xml.
+Needs pandoc.
+"""
+
+import datetime
+import html
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SITE = "https://pbnj.github.io"
+HOME_POSTS = 5
+MIN_TOC_SECTIONS = 4  # posts with fewer "## " sections get no table of contents
+FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
+FIELD = re.compile(r'^(\w+):\s*"?(.*?)"?\s*$')
+
+
+def front_matter(path):
+    match = FRONT_MATTER.match(path.read_text())
+    if not match:
+        sys.exit(f"{path}: missing YAML front matter")
+    fields = {}
+    for line in match.group(1).splitlines():
+        field = FIELD.match(line)
+        if field:
+            fields[field.group(1).lower()] = field.group(2)
+    for key in ("title", "date"):
+        if key not in fields:
+            sys.exit(f"{path}: front matter needs {key}")
+    return fields
+
+
+def render(src, slug):
+    sections = len(re.findall(r"^## ", src.read_text(), re.M))
+    toc = ["--toc", "--toc-depth", "2"] if sections >= MIN_TOC_SECTIONS else []
+    subprocess.run(
+        [
+            "pandoc", str(src),
+            "--from", "gfm+yaml_metadata_block",
+            "--to", "html5",
+            "--template", "scripts/post.html",
+            "--lua-filter", "scripts/post.lua",
+            *toc,
+            "--metadata", f"slug={slug}",
+            "--output", f"blog/{slug}.html",
+        ],
+        cwd=ROOT,
+        check=True,
+    )
+
+
+def replace_list(path, items):
+    text = path.read_text()
+    pattern = re.compile(r"(<!-- posts:start -->).*?(\s*<!-- posts:end -->)", re.S)
+    if not pattern.search(text):
+        sys.exit(f"{path}: missing posts:start / posts:end markers")
+    path.write_text(pattern.sub(lambda m: m.group(1) + "\n" + items + m.group(2), text))
+
+
+def feed(posts):
+    items = []
+    for post in posts:
+        url = f"{SITE}/blog/{post['slug']}.html"
+        day = datetime.date.fromisoformat(post["date"])
+        items.append(
+            "    <item>\n"
+            f"      <title>{html.escape(post['title'])}</title>\n"
+            f"      <link>{url}</link>\n"
+            f"      <guid>{url}</guid>\n"
+            f"      <pubDate>{day.strftime('%a, %d %b %Y')} 00:00:00 +0000</pubDate>\n"
+            f"      <description>{html.escape(post.get('description') or post['title'])}</description>\n"
+            "    </item>"
+        )
+    return (
+        '<?xml version="1.0" encoding="utf-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        "  <channel>\n"
+        "    <title>Peter Benjamin</title>\n"
+        f"    <link>{SITE}/</link>\n"
+        "    <description>Notes on infrastructure, security, and tooling.</description>\n"
+        "    <language>en</language>\n"
+        f'    <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>\n'
+        + "\n".join(items)
+        + "\n  </channel>\n</rss>\n"
+    )
+
+
+def main():
+    posts = []
+    for src in sorted((ROOT / "posts").glob("*.md")):
+        post = front_matter(src)
+        if post.get("draft", "").lower() == "true":
+            continue
+        post["slug"] = src.stem
+        render(src, post["slug"])
+        print(f"blog/{post['slug']}.html")
+        posts.append(post)
+    posts.sort(key=lambda p: (p["date"], p["title"]), reverse=True)
+    lines = [
+        f'        <li><a href="/blog/{p["slug"]}.html">{html.escape(p["title"])}</a> '
+        f'<time datetime="{p["date"]}">{p["date"]}</time></li>'
+        for p in posts
+    ]
+    replace_list(ROOT / "blog/index.html", "\n".join(lines))
+    replace_list(ROOT / "index.html", "\n".join(lines[:HOME_POSTS]))
+    (ROOT / "feed.xml").write_text(feed(posts))
+
+
+if __name__ == "__main__":
+    main()

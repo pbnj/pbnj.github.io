@@ -20,36 +20,32 @@
     </header>
 
     <main>
+      <!-- Generated from posts/hello-world.md by scripts/build-posts. Edit the Markdown, not this file. -->
       <article class="md">
         <h1>Hello, world</h1>
         <p class="meta"><time datetime="2026-11-10">2026-11-10</time></p>
-
-        <p>
-          This site is <strong>plain HTML and CSS</strong>, served by
-          <a href="https://pages.github.com">GitHub Pages</a>. No build step,
-          no framework, <em>no JavaScript</em>.
-        </p>
-
-        <h2>Why</h2>
-        <ul>
-          <li>Nothing to install or upgrade</li>
-          <li>Loads instantly</li>
-          <li>Works in <code>lynx</code></li>
-        </ul>
-
-        <blockquote>Simplicity is prerequisite for reliability. — Edsger W. Dijkstra</blockquote>
-
-        <h2>Adding a post</h2>
-        <ol>
-          <li>Copy the template</li>
-          <li>Write the post</li>
-          <li>Link it from the post list, home page, and feed</li>
-        </ol>
-<pre data-lang="sh"><code>cp blog/_template.html blog/my-post.html
-$EDITOR blog/my-post.html</code></pre>
-
-        <hr>
-        <p>More soon.</p>
+<p>This site is <strong>plain HTML and CSS</strong>, served by <a
+href="https://pages.github.com">GitHub Pages</a>. No framework, <em>no
+JavaScript</em>.</p>
+<h2 id="why">Why</h2>
+<ul>
+<li>Nothing to install or upgrade</li>
+<li>Loads instantly</li>
+<li>Works in <code>lynx</code></li>
+</ul>
+<blockquote>
+<p>Simplicity is prerequisite for reliability. — Edsger W. Dijkstra</p>
+</blockquote>
+<h2 id="adding-a-post">Adding a post</h2>
+<ol type="1">
+<li>Write the post in Markdown under <code>posts/</code></li>
+<li>Run the build script</li>
+<li>Commit the Markdown and the generated HTML</li>
+</ol>
+<pre data-lang="sh"><code>$EDITOR posts/my-post.md
+scripts/build-posts</code></pre>
+<hr />
+<p>More soon.</p>
       </article>
 
       <hr>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Testing Configuration Files · Peter Benjamin</title>
+  <meta name="description" content="Unit Testing Configuration Files">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="alternate" type="application/rss+xml" title="Peter Benjamin" href="/feed.xml">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="site-title" href="/">pbnj</a>
+      <nav>
+        <a href="/">home</a>
+        <a href="/blog/" aria-current="page">blog</a>
+        <a href="/resume.html">resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Generated from posts/unit-test-your-configuration-files.md by scripts/build-posts. Edit the Markdown, not this file. -->
+      <article class="md">
+        <h1>Unit Testing Configuration Files</h1>
+        <p class="meta"><time datetime="2020-02-20">2020-02-20</time></p>
+<p><img
+src="https://images.unsplash.com/photo-1516992654410-9309d4587e94?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2700&amp;q=80"
+alt="pile of paper garbage" /> <em>Infrastructure as Code. Photo
+courtesy: <a href="https://unsplash.com/@mediavormgever">@Bass
+Emmen</a></em></p>
+<h2 id="overview">Overview</h2>
+<p>The era of Infrastructure-as-Code (IaC) has unlocked tremendous
+developer productivity and agility features. Now, as an Engineer, we can
+declare our infrastructure and environments as structured data in
+configuration files, such as Terraform templates, Dockerfiles, and
+Kubernetes manifests.</p>
+<p>However, this agility and speed of provisioning and configuring
+infrastructure comes with a high risk of bugs in the form of
+misconfigurations.</p>
+<p>Fortunately, we can solve this problem just as we can solve for other
+bugs in our products, by writing <strong>unit tests</strong>.</p>
+<p>One such tool that can help us unit test our configuration files is
+<a
+href="https://github.com/instrumenta/conftest"><code>conftest</code></a>.
+What is unique about <code>conftest</code> is that it uses <a
+href="https://github.com/open-policy-agent/opa">Open-Policy-Agent</a>
+(OPA) and a policy language, called <a
+href="https://www.openpolicyagent.org/docs/latest/policy-language/">Rego</a>
+to accomplish this.</p>
+<p>This might appear difficult at first, but it will start to make
+sense.</p>
+<p>Let's explore 2 use-cases where we can test our configurations!</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First, some prerequisites:</p>
+<ul>
+<li><a
+href="https://github.com/instrumenta/conftest"><code>conftest</code></a>:
+<ul>
+<li>macOS:
+<code>brew install instrumenta/instrumenta/conftest</code></li>
+</ul></li>
+<li><strong>(Optional)</strong> <a
+href="https://github.com/open-policy-agent/opa"><code>opa</code></a>:
+<ul>
+<li>macOS: <code>brew install opa</code></li>
+</ul></li>
+</ul>
+<h3 id="dockerfile">Dockerfile</h3>
+<p>Let's say we want to prevent some images and/or tags (e.g.
+<code>latest</code>).</p>
+<p>We need to create a simple Dockerfile:</p>
+<pre data-lang="Dockerfile"><code>FROM kalilinux/kali-linux-docker:latest
+
+ENTRYPOINT ["echo"]</code></pre>
+<p>Now, we need to create our first unit test file, let's call it
+<code>test.rego</code>, and place it in a directory, let's call it
+<code>policy</code> (this is configurable).</p>
+<pre data-lang="rego"><code>package main
+
+disallowed_tags := ["latest"]
+disallowed_images := ["kalilinux/kali-linux-docker"]
+
+deny[msg] {
+        input[i].Cmd == "from"
+        val := input[i].Value
+        tag := split(val[i], ":")[1]
+        contains(tag, disallowed_tags[_])
+
+        msg = sprintf("[%s] tag is not allowed", [tag])
+}
+
+deny[msg] {
+        input[i].Cmd == "from"
+        val := input[i].Value
+        image := split(val[i], ":")[0]
+        contains(image, disallowed_images[_])
+
+        msg = sprintf("[%s] image is not allowed", [image])
+}</code></pre>
+<p>Assuming we are in the right directory, we can test our
+Dockerfile:</p>
+<pre data-lang="sh"><code>$ ls
+Dockerfile      policy/
+
+$ conftest test -i Dockerfile ./Dockerfile
+FAIL - ./Dockerfile - [latest] tag is not allowed
+FAIL - ./Dockerfile - [kalilinux/kali-linux-docker] image is not allowed</code></pre>
+<p>Just to be sure, let's change this Dockerfile to pass the test:</p>
+<pre data-lang="Dockerfile"><code># FROM kalilinux/kali-linux-docker:latest
+FROM debian:buster
+
+ENTRYPOINT ["echo"]</code></pre>
+<pre data-lang="sh"><code>$ ls
+Dockerfile      policy/
+
+$ conftest test -i Dockerfile ./Dockerfile
+PASS - ./Dockerfile - data.main.deny</code></pre>
+<p>"It works! But I don't understand how," I hear you thinking to
+yourself.</p>
+<p>Let's break the Rego syntax down:</p>
+<ul>
+<li><p><code>package main</code> is a way for us to put some rules that
+belong together in a namespace. In this case, we named it
+<code>main</code> because <code>conftest</code> defaults to it, but we
+can easily do something like <code>package docker</code> and then run
+<code>conftest test -i Dockerfile --namespace docker ./Dockerfile</code></p></li>
+<li><p><code>disallowed_tags</code> &amp; <code>disallowed_images</code>
+are just simple variables that hold an array of strings</p></li>
+<li><p><code>deny[msg] { ... }</code> is the start of the deny rule and
+it means that the Dockerfile should be rejected and the user should be
+given an error message <code>msg</code> if the conditions in the body
+(i.e. <code>{ ... }</code>) are true</p></li>
+<li><p>Expressions in the body of the deny rule are treated as logical
+AND. For example:</p>
+<pre data-lang="rego"><code>1 == 1                    # IF 1 is equal to 1
+contains("foobar", "foo") # AND "foobar" contains "foo"
+                          # This would trigger the deny rule</code></pre></li>
+<li><p><code>input[i].Cmd == "from"</code> checks if the Docker command
+is <code>FROM</code>. <code>input[i]</code> means we can have multiple
+Dockerfiles being tested at once. This will iterate over them</p></li>
+<li><p>The next 2 lines are assignments just to split a string and store
+some data in variables</p></li>
+<li><p><code>contains(tag, disallowed_tags[_])</code> will return true
+if the <code>tag</code> we obtained from the Dockerfile contains one of
+the <code>disallowed_tags</code>. <code>array[_]</code> syntax means
+iterate over values</p></li>
+<li><p><code>msg := sprinf(...)</code> creates the message we want to
+tell our user if this deny rule is triggered</p></li>
+<li><p>The second <code>deny[msg]</code> rule checks that the image
+itself is not on the blocklist.</p></li>
+</ul>
+<h3 id="kubernetes">Kubernetes</h3>
+<p>Let's say we want to ensure that all pods are running as a non-root
+user.</p>
+<p>We need to create our deployment</p>
+<pre data-lang="sh"><code>$ mkdir -p kubernetes
+$ cat &lt;&lt;EOF &gt;./kubernetes/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.7.9
+          ports:
+            - containerPort: 80
+EOF</code></pre>
+<p>Now, we need to create our unit test:</p>
+<pre data-lang="sh"><code>$ mkdir -p ./kubernetejjjs/policy
+$ cat &lt;&lt;EOF &gt;./kubernetes/policy/test.rego
+package main
+
+name := input.metadata.name
+
+deny[msg] {
+  input.kind == "Deployment"
+  not input.spec.template.spec.securityContext.runAsNonRoot
+
+  msg = sprintf("Containers must run as non root in Deployment %s. See: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/", [name])
+}
+EOF</code></pre>
+<p>And, let's run it:</p>
+<pre data-lang="sh"><code>conftest test -i yaml ./kubernetes/deployment.yaml
+FAIL - ./kubernetes/deployment.yaml - Containers must run as non root in Deployment nginx-deployment. See: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</code></pre>
+<p>This is a bit more straightforward:</p>
+<ul>
+<li>Get the <code>metadata.name</code> from the <code>input</code>
+(which is the Kubernetes Deployment yaml file)</li>
+<li>Create a deny rule that is triggered if:
+<ul>
+<li><code>input.kind</code> is <code>Deployment</code> and</li>
+<li><code>securityContext.runAsNonRoot</code> is not set</li>
+</ul></li>
+<li>Return an error message to the user that containers must run as
+non-root and point them to the docs.</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>So, where to go from here?</p>
+<p>The Rego language is vast and it can take a bit to wrap your head
+around how it works. You can even send and receive HTTP requests inside
+Rego.</p>
+<p>I recommend reading the docs to learn more about Rego's
+capabilities:</p>
+<ul>
+<li><a
+href="https://www.openpolicyagent.org/docs/latest/policy-reference/">Reference
+sheet</a></li>
+<li><a
+href="https://www.openpolicyagent.org/docs/latest/policy-cheatsheet/">Cheat
+sheet</a></li>
+</ul>
+<p>I also barely scratched the surface with <code>conftest</code> in
+this blog post. The repository has a nice list of <a
+href="https://github.com/instrumenta/conftest#examples">examples</a>
+that you should peruse at your leisure. <code>conftest</code> even
+supports sharing policies via uploading OPA bundles to OCI-compliant
+registries, e.g. <code>conftest push ...</code>,
+<code>conftest pull ...</code>.</p>
+<p>Lastly, if you have any questions, the OPA community is friendly and
+welcoming. Feel free to join the <code>#conftest</code> channel in <a
+href="https://slack.openpolicyagent.org/">OPA Slack</a>.</p>
+<p>Happy coding!</p>
+      </article>
+
+      <hr>
+      <p><a href="/blog/">← all posts</a></p>
+    </main>
+
+    <footer>© 2026 Peter Benjamin · <a href="/feed.xml">rss</a></footer>
+  </div>
+</body>
+</html>
