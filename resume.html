@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume · Peter Benjamin</title>
+  <meta name="description" content="Resume of Peter Benjamin, software, infrastructure and security engineer.">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="site-title" href="/">pbnj</a>
+      <nav>
+        <a href="/">home</a>
+        <a href="/blog/">blog</a>
+        <a href="/resume.html" aria-current="page">resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Peter Benjamin</h1>
+      <p class="lede">Software, Infrastructure &amp; Security Engineer · Ohio</p>
+      <div class="links">
+        <a href="https://github.com/pbnj">github.com/pbnj</a>
+        <a href="https://www.linkedin.com/in/pbnj">linkedin.com/in/pbnj</a>
+        <a href="https://pbnj.github.io">pbnj.github.io</a>
+        <a class="no-print" href="javascript:window.print()">print / save as PDF</a>
+      </div>
+
+      <h2>Summary</h2>
+      <p>
+        Software engineer and developer advocate with a background in information
+        security, focused on helping engineers build secure, scalable distributed
+        systems on modern infrastructure. Deep experience in Go, Kubernetes, and
+        application and cloud security. Kubernetes and CNCF contributor.
+      </p>
+
+      <h2>Experience</h2>
+
+      <div class="resume-entry">
+        <header>
+          <h3>Komodo Health</h3>
+          <span class="meta">Jun 2023 – present</span>
+        </header>
+        <div class="meta">Senior Cloud Security Engineer</div>
+        <ul>
+          <li>Turned a year-old vulnerability backlog into a steady flow: closed 700+ findings in four months (about 40 a week) across dependency, container, infrastructure-as-code and cloud-posture scans, with new findings now usually fixed within days of detection. Every live finding is either fixed or formally risk-accepted by a person, based on documented reachability, exploitability and production-exposure analysis.</li>
+          <li>Built an AI-agent workflow that triages, investigates and remediates security findings end to end, with dedicated triage, investigation and remediation agents working the backlog in parallel and handing off to a human only when a decision needs one.</li>
+          <li>Built a security metrics dashboard for engineering and leadership that syncs findings from Snyk and Linear to report mean time to remediate, SLA adherence, open findings by severity and scan coverage per application, plus per-product threat-model status.</li>
+          <li>Designed and maintain a reusable GitHub Actions security workflow adopted across the company's product repositories, covering SAST, SCA, container, IaC (Terraform, OpenTofu, Helm, Kustomize), secret scanning with four detection engines, and workflow linting (zizmor, actionlint). Findings appear as inline PR comments via reviewdog, and scans run only when relevant files change.</li>
+          <li>Launched a hardened, minimal container base-image program on Wolfi (apko, melange) for Python and JavaScript: signed, digest-pinned images rebuilt on a schedule and promoted only at zero known vulnerabilities.</li>
+          <li>Built an agent-driven continuous threat-modeling pipeline (STRIDE, plus MAESTRO for AI systems) with SARIF as the source of truth, and threat-modeled 15+ services, including AI agent runtimes, MCP gateways and sandboxed code-execution services.</li>
+          <li>Created AI agent skills for pull-request security review that catch broken authentication and authorization, tenant-isolation and injection bugs, verify each finding before posting, and publish results as inline review comments and SARIF.</li>
+          <li>Packaged security skills and scanning hooks into a Claude Code plugin, so developers' AI coding agents scan their own changes as they write them.</li>
+          <li>Cut the noise from automated dependency-fix pull requests by replacing per-finding fix PRs with grouped, cooldown-gated Dependabot updates.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <header>
+          <h3>Reltio</h3>
+          <span class="meta">Nov 2021 – Jun 2023</span>
+        </header>
+        <div class="meta">Senior Staff Software Engineer</div>
+        <ul>
+          <li>Designed, implemented, and rolled out a new least-privilege cloud identity and access management architecture across Okta, AWS, GCP, and Azure.</li>
+          <li>Enabled developer self-service with an automated IAM workflow across AWS, GCP, and Azure, built on Terraform.</li>
+          <li>Reduced cloud security risk by packaging security best practices, such as CIS benchmarks, as reusable Terraform modules deployed through CI/CD.</li>
+          <li>Worked with product developers to add static code analysis, container scanning, and dependency vulnerability scanning to their development life cycle and CI/CD pipelines.</li>
+          <li>Shepherded security and operations architecture proposals to standardize practices across functional groups.</li>
+          <li>Taught product and operations engineers to threat-model applications and cloud infrastructure.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <header>
+          <h3>Zuora</h3>
+          <span class="meta">Apr 2020 – Nov 2021</span>
+        </header>
+        <div class="meta">Senior Software Engineer</div>
+        <ul>
+          <li>Reduced lead time for provisioning AWS environments and Kubernetes clusters by adopting GitOps and building CI/CD pipelines that turn infrastructure-as-code into production-ready environments.</li>
+          <li>Standardized secret management by architecting and deploying highly available Vault clusters, integrated with the internal continuous deployment system and production applications.</li>
+          <li>Improved deployment frequency by building a system to measure DORA metrics with cloud native tools (Argo) and custom pub-sub services in Go that publish to internal dashboards.</li>
+          <li>Reduced outstanding vulnerabilities past SLO by adding SAST and SCA scanning to standardized CI/CD pipelines, catching findings early in the development life cycle.</li>
+          <li>Drafted and reviewed standards for next-generation cloud native applications and security practices.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <header>
+          <h3>ID Analytics</h3>
+          <span class="meta">Dec 2019 – Apr 2020</span>
+        </header>
+        <div class="meta">Principal Security Engineer</div>
+        <ul>
+          <li>Defined the application security program.</li>
+          <li>Implemented monitoring for software supply chain threats, such as malicious or compromised open source packages.</li>
+          <li>Performed incident response and remediation.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <header>
+          <h3>Teradata</h3>
+          <span class="meta">May 2018 – Nov 2019</span>
+        </header>
+        <div class="meta">Senior Software Engineer</div>
+        <ul>
+          <li>Contributed to KubeKit, an open source tool for provisioning and configuring Kubernetes clusters on bare metal, AWS EC2, AWS EKS, Azure AKS, OpenStack, and VMware vSphere.</li>
+          <li>As lead security engineer, set Kubernetes and Docker security standards, fixed security bugs in KubeKit and Kubernetes, and adopted cloud native security projects such as Open Policy Agent.</li>
+          <li>Acted as developer advocate for Kubernetes, containers, and application security.</li>
+          <li>Contributed to upstream Kubernetes and CNCF projects and took part in community meetings.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <header>
+          <h3>ID Analytics</h3>
+          <span class="meta">May 2017 – May 2018</span>
+        </header>
+        <div class="meta">Senior Security Engineer</div>
+        <ul>
+          <li>Reduced AWS security risk by building a tool that detects misconfigurations such as public S3 buckets, overly permissive IAM roles, and API keys nearing expiry.</li>
+          <li>Performed penetration tests of web applications and internal infrastructure.</li>
+          <li>Removed applications' need to manage their own encryption keys by deploying HashiCorp Vault's Transit backend as encryption-as-a-service.</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <header>
+          <h3>Intuit</h3>
+          <span class="meta">Jan 2016 – May 2017</span>
+        </header>
+        <div class="meta">Senior Security Software Engineer · Jul 2016 – May 2017</div>
+        <ul>
+          <li>Developed an internal security engineering platform that automates offensive attack scenarios, turning manual red-team techniques into repeatable, scheduled tests.</li>
+        </ul>
+        <div class="meta">Security Software Engineer II · Jan 2016 – Jul 2016</div>
+        <ul>
+          <li>Worked as a red teamer and offensive security engineer, emulating real-world adversaries against company applications and infrastructure.</li>
+        </ul>
+      </div>
+
+
+
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>Go, Rust, TypeScript/Node.js, Shell</dd>
+        <dt>Infrastructure</dt><dd>AWS, GCP, Azure, Kubernetes, Terraform, Argo, Vault, CI/CD, GitOps</dd>
+        <dt>Security</dt><dd>Cloud IAM, application security, threat modeling, SAST/SCA, penetration testing, incident response</dd>
+        <dt>Spoken</dt><dd>English, Arabic</dd>
+      </dl>
+
+      <h2>Publications</h2>
+      <ul>
+        <li><a href="https://dev.to/pbnj/demystifying-stride-threat-models-230m">Demystifying STRIDE Threat Models</a> — DEV</li>
+        <li><a href="https://www.youtube.com/watch?v=UdMFTdeAL1s">Attacking &amp; Defending Kubernetes Clusters: A Guided Tour</a> — KubeCon NA 2019 tutorial</li>
+      </ul>
+
+
+      <section class="print-hide">
+      <h2>Open source</h2>
+      <ul>
+        <li><a href="https://github.com/pbnj/infosec-interview-questions">infosec-interview-questions</a> — interview questions for infosec roles</li>
+        <li><a href="https://github.com/pbnj/aws-console">aws-console</a> — open the AWS console from the CLI</li>
+        <li><a href="https://github.com/pbnj/terradoc">terradoc</a> — Terraform provider docs in the terminal</li>
+      </ul>
+      </section>
+
+      <h2>Education</h2>
+      <div class="resume-entry">
+        <header>
+          <h3>National University</h3>
+          <span class="meta">2011 – 2012</span>
+        </header>
+        <div class="meta">M.S., Cyber Security &amp; Information Assurance</div>
+      </div>
+      <div class="resume-entry">
+        <header>
+          <h3>National University</h3>
+          <span class="meta">2007 – 2011</span>
+        </header>
+        <div class="meta">B.S., Allied Health</div>
+      </div>
+      <div class="resume-entry">
+        <header>
+          <h3>San Diego State University</h3>
+          <span class="meta">2009 – 2010</span>
+        </header>
+        <div class="meta">Organic Chemistry</div>
+      </div>
+    </main>
+
+    <footer>© 2026 Peter Benjamin</footer>
+  </div>
+</body>
+</html>
